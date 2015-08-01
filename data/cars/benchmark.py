@@ -24,6 +24,6 @@ clf = tree.DecisionTreeClassifier().fit(train_X, train_y)
 clf.score(train_X, train_y)
 y_pred = clf.predict(test_X)
 
-# Create a submission
+# Create a submissions
 submission = pd.DataFrame({ 'RefId' : l_test.RefId, 'prediction' : y_pred })
-submission.to_csv('submission.csv')
+submission.to_csv('submission.csv', index=False)
